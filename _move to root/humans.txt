@@ -1,0 +1,16 @@
+/* TEAM */
+  Developer: Steve Mynett
+  Site: http://mynettworks.com
+  Twitter: @stevemynett
+  Location: Vancouver, BC
+
+/* THANKS */
+  Names:
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery
+  Software: Textmate, Git, Git for Mac
+  
+
+   
