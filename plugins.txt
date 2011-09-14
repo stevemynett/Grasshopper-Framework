@@ -1,0 +1,15 @@
+# Default Plugins I use in *most* projects. 
+# A mental list here to refer to when starting projects
+
+Akismet
+All In One SEO Pack
+Bad Behaviour
+Contact Form 7
+Disable Search
+Global Admin Bar Hide or Remove
+Google Analytics
+Google Sitemaps
+Login-lock
+Twitter for Wordpress
+WP Super Cache (check for better plugins)
+Google Sitemaps
