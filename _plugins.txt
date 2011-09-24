@@ -10,6 +10,7 @@ Global Admin Bar Hide or Remove
 Google Analytics
 Google Sitemaps
 Login-lock
+Login Lockdown
 Twitter for Wordpress
 WP Super Cache
 WP Smush.it
@@ -21,3 +22,7 @@ WP-DB-Backup
 WP-Stats-Dashboard
 Google Analyticator
 WP Example Content 
+404 Notifier
+Velvet Blues Update URL's
+Post Rank
+Adminimize

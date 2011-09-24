@@ -117,4 +117,37 @@ add_filter   ('post_comments_link',      'xwp_dofollow');
 add_filter   ('comment_reply_link',      'xwp_dofollow');
 add_filter   ('comment_text',            'xwp_dofollow');
 
+// Some Admin Customization
+// More info: https://github.com/stevemynett/Wordpress-Framework
+// CUSTOM ADMIN LOGIN HEADER LOGO
+
+function my_custom_login_logo() {
+	//echo '<style  type="text/css"> h1 a {  background-image:url('.get_bloginfo('template_directory').'/images/logo_admin.png)  !important; } </style>';
+}
+add_action('login_head',  'my_custom_login_logo');
+
+// CUSTOM ADMIN LOGIN LOGO LINK
+function change_wp_login_url() {
+	echo bloginfo('url');  // OR ECHO YOUR OWN URL
+}
+add_filter('login_headerurl', 'change_wp_login_url');
+
+// CUSTOM ADMIN LOGIN LOGO & ALT TEXT
+function change_wp_login_title() {
+	echo get_option('blogname'); // OR ECHO YOUR OWN ALT TEXT
+}
+add_filter('login_headertitle', 'change_wp_login_title');
+
+// REMOVE META BOXES FROM WORDPRESS DASHBOARD FOR ALL USERS
+
+function example_remove_dashboard_widgets() {
+	// Globalize the metaboxes array, this holds all the widgets for wp-admin	global $wp_meta_boxes;	
+	//unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
+	//unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
+	//unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
+} 
+add_action('wp_dashboard_setup', 'example_remove_dashboard_widgets' );
+	
+
+
 ?>
