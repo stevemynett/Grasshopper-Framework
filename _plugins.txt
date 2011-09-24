@@ -11,5 +11,13 @@ Google Analytics
 Google Sitemaps
 Login-lock
 Twitter for Wordpress
-WP Super Cache (check for better plugins)
-Google Sitemaps
+WP Super Cache
+WP Smush.it
+Disqus Comments
+Subscribe to Comments
+WP Minify
+Scissors Continued (image uploading tool)
+WP-DB-Backup
+WP-Stats-Dashboard
+Google Analyticator
+WP Example Content 
