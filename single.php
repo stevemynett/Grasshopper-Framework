@@ -4,11 +4,9 @@
 		<section id="main_content">
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header>
 						<h2><?php the_title(); ?></h2>
 						<?php post_meta(); ?>
-					</header>
-					<span class="content"><?php the_content();?></span>
+					<?php the_content();?>
 														
 					<nav class="post-navigation">
 						<div class="navigation-previous"><?php previous_post_link('&laquo; %link') ?></div>

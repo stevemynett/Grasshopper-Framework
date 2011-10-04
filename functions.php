@@ -148,6 +148,7 @@ function example_remove_dashboard_widgets() {
 } 
 add_action('wp_dashboard_setup', 'example_remove_dashboard_widgets' );
 	
-
+// removes error messages for failed login
+add_filter('login_errors',create_function('$a', "return null;"));
 
 ?>

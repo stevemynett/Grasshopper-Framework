@@ -10,10 +10,8 @@ get_header(); ?>
 			
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<header>
 					<h2><?php the_title(); ?></h2>
-				</header>
-				<span class="content"><?php the_content();?></span>
+				<?php the_content();?>
 				<?php endwhile; endif; ?>
 			</article>
 		</section>
