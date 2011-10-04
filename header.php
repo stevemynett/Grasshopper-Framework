@@ -16,6 +16,9 @@
 
 	<script src="<?php bloginfo('template_url'); ?>/js/modernizr.2.0.6.custom.js"></script>
 	<?php wp_enqueue_script('jquery', '/wp-content/themes/sm_framework/js/jquery-1.6.2.min.js', array('jquery')); ?>	
+	
+	<?php if ( is_singular() ) echo '<link rel="canonical" href="' . get_permalink(); ?>
+	
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
