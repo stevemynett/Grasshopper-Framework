@@ -7,7 +7,7 @@
 						<h2><?php the_title(); ?></h2>
 						<?php post_meta(); ?>
 					<?php the_content();?>
-														
+					<?php edit_post_link(); ?>
 					<nav class="post-navigation">
 						<div class="navigation-previous"><?php previous_post_link('&laquo; %link') ?></div>
 						<div class="navigation-next"><?php next_post_link('%link &raquo;') ?></div>
