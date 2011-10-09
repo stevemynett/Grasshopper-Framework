@@ -476,8 +476,13 @@ text-rendering: optimizeLegibility;
 	text-shadow: none; 
 }
 
+/* =============================================================================
+	http://twitter.com/#!/shawnjohnston/status/119136576906334209
+   ========================================================================== */
 
-
+body {
+	-webkit-text-size-adjust: none;
+}
 
 
 
