@@ -7,21 +7,3 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   vertical-align: baseline;
 }
 
-/*
-	* Remove text-shadow in selection highlight: h5bp.com/i
-	* These selection declarations have to be separate
-	* Also: hot pink! (or customize the background color to match your design)
-	* Yes I not a reset but for now this is the best place for it. 
- */
-
-::-moz-selection { 
-	background: #fe57a1; 
-	color: #fff; 
-	text-shadow: none; 
-}
-
-::selection { 
-	background: #fe57a1; 
-	color: #fff; 
-	text-shadow: none; 
-}

@@ -1,4 +1,4 @@
-/*! normalize.css 2011-09-22T17:42 UTC - http://github.com/necolas/normalize.css */
+/* normalize.css 2011-09-22T17:42 UTC - http://github.com/necolas/normalize.css */
 
 /* =============================================================================
    HTML5 display definitions
@@ -429,57 +429,5 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
-
-
-
-/* =============================================================================
-   Bits and pieces from http://www.paulrhayes.com/2010-08/useful-css-snippets/
-   ========================================================================== */
-
-input[type=search] {
-		-webkit-appearance: none;
-}
-
-input[type=search]::-webkit-search-decoration {
-	display: none;
-}
-
-text-rendering: optimizeLegibility;
-
-
-/* =============================================================================
-  	Some H5BP Stuff
-   ========================================================================== */
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection declarations have to be separate
- * Also: hot pink! (or customize the background color to match your design)
- */
-
-::-moz-selection { 
-	background: #fe57a1;
-	color: #fff; 
-	text-shadow: none; 
-}
-
-::selection { 
-	background: #fe57a1; 
-	color: #fff; 
-	text-shadow: none; 
-}
-
-/* =============================================================================
-	http://twitter.com/#!/shawnjohnston/status/119136576906334209
-   ========================================================================== */
-
-body {
-	-webkit-text-size-adjust: none;
-}
-
-
-
-
-
 
 
