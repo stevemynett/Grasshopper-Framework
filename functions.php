@@ -151,4 +151,72 @@ function example_remove_dashboard_widgets() {
 } 
 add_action('wp_dashboard_setup', 'example_remove_dashboard_widgets' );
 
+
+// Extend the edit comments to include delete and mark as spam
+// delete_comment_link(get_comment_ID()); added in comments.php as well 
+function delete_comment_link($id) {
+	if (current_user_can('edit_post')) {
+ 		echo '| <a href="'.admin_url("comment.php?action=cdc&c=$id").'">del</a> ';
+		echo '| <a href="'.admin_url("comment.php?action=cdc&dt=spam&c=$id").'">spam</a>';
+  }
+}
+
+
+// This code automatically rejects any request for comment posting coming from a browser (or, more commonly, a bot) that has no referrer in the request. Checking is done with the PHP $_SERVER[] array. If the referrer is not defined or is incorrect, the wp_die function is called and the script stops its execution
+
+function check_referrer() {
+	if (!isset($_SERVER['HTTP_REFERER']) || $_SERVER['HTTP_REFERER'] == “”) {
+		wp_die( __('Please enable referrers in your browser, or, if you\'re a spammer, bugger off!') );
+	}
+}
+add_action('check_comment_flood', 'check_referrer');
+
+// adds the browser to the body class function
+	add_filter('body_class','browser_body_class');
+function browser_body_class($classes) {
+	global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
+	if($is_lynx) $classes[] = 'lynx';
+	elseif($is_gecko) $classes[] = 'gecko';
+	elseif($is_opera) $classes[] = 'opera';
+	elseif($is_NS4) $classes[] = 'ns4';
+	elseif($is_safari) $classes[] = 'safari';
+	elseif($is_chrome) $classes[] = 'chrome';
+	elseif($is_IE) $classes[] = 'ie';
+	else $classes[] = 'unknown';
+	if($is_iphone) $classes[] = 'iphone';
+	return $classes;
+}
+
+// http://wp.smashingmagazine.com/2009/12/14/advanced-power-tips-for-wordpress-template-developers-reloaded/
+// Customizing the Dashboard. Adding some stuff, remove some stuff
+// Other options discussed at http://wp.smashingmagazine.com/2011/05/10/new-wordpress-power-tips-for-template-developers-and-consultants/
+
+add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');
+
+function my_custom_dashboard_widgets() {
+	global $wp_meta_boxes;
+	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
+	wp_add_dashboard_widget('custom_help_widget', 'Help and Support', 'custom_dashboard_help');
+}
+
+function custom_dashboard_help() {
+	echo '<p>Custom welcome message goes here.</p>';
+}
+
+// Changes Posts to Articles
+// http://wp.smashingmagazine.com/2011/05/10/new-wordpress-power-tips-for-template-developers-and-consultants/
+// left on by default. Comment out to revert back
+// Only works in php5
+add_filter(  'gettext',  'change_post_to_article'  );
+add_filter(  'ngettext',  'change_post_to_article'  );
+function change_post_to_article( $translated ) {
+	$translated = str_ireplace(  'Post',  'Article',  $translated ); 
+	return $translated;
+}
+
+
+
+
 ?>
