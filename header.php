@@ -27,8 +27,12 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<a class="logo ir" href="<?php bloginfo('home'); ?>" rel="home"><?php bloginfo('name'); ?> |  <?php bloginfo('description'); ?></a>
+
+<div id="wrapper">
+	<header>
+		<a class="logo ir" href="<?php bloginfo('home'); ?>" rel="home"><?php bloginfo('name'); ?> |  <?php bloginfo('description'); ?></a>
 	
-	<nav class="primary">>
-<a href="<?php echo get_permalink(2); ?>" <?php if(is_page('2')){echo 'class="current_page_item"';};?>>Home</a>
-	</nav>
+		<nav class="primary">>
+	<a href="<?php echo get_permalink(2); ?>" <?php if(is_page('2')){echo 'class="current_page_item"';};?>>Home</a>
+		</nav>
+	</header>

@@ -4,4 +4,5 @@
 			<?php get_template_part( 'loop', 'index' ); ?>
 		</section>	
 <?php get_sidebar(); ?>
+	</section>
 <?php get_footer(); ?>

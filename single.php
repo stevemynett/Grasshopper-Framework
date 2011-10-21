@@ -19,5 +19,6 @@
 	  		<?php endwhile; endif; ?>
 		</section>
 <?php get_sidebar(); ?>
+</section>
 <?php get_footer(); ?>
 
