@@ -77,9 +77,6 @@ remove_action('wp_head', 'start_post_rel_link', 10, 0);
 remove_action('wp_head', 'parent_post_rel_link', 10, 0);
 remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);	
 
-//doesn't let people know whether they got their user name or PW wrong on login fail
-add_filter('login_errors',create_function('$a', "return null;"));
-
 // trim down the profile page
 add_filter('user_contactmethods','hide_profile_fields',10,1);
 function hide_profile_fields( $contactmethods ) {
@@ -136,8 +133,8 @@ add_filter   ('post_comments_link',      'xwp_dofollow');
 add_filter   ('comment_reply_link',      'xwp_dofollow');
 add_filter   ('comment_text',            'xwp_dofollow');
 
+
 // Some Admin Customization
-// More info: https://github.com/stevemynett/Wordpress-Framework
 // CUSTOM ADMIN LOGIN HEADER LOGO
 
 function my_custom_login_logo() {
@@ -145,20 +142,7 @@ function my_custom_login_logo() {
 }
 add_action('login_head',  'my_custom_login_logo');
 
-// CUSTOM ADMIN LOGIN LOGO LINK
-function change_wp_login_url() {
-	echo bloginfo('url');  // OR ECHO YOUR OWN URL
-}
-add_filter('login_headerurl', 'change_wp_login_url');
-
-// CUSTOM ADMIN LOGIN LOGO & ALT TEXT
-function change_wp_login_title() {
-	echo get_option('blogname'); // OR ECHO YOUR OWN ALT TEXT
-}
-add_filter('login_headertitle', 'change_wp_login_title');
-
 // REMOVE META BOXES FROM WORDPRESS DASHBOARD FOR ALL USERS
-
 function example_remove_dashboard_widgets() {
 	// Globalize the metaboxes array, this holds all the widgets for wp-admin	global $wp_meta_boxes;	
 	//unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
@@ -166,8 +150,5 @@ function example_remove_dashboard_widgets() {
 	//unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
 } 
 add_action('wp_dashboard_setup', 'example_remove_dashboard_widgets' );
-	
-// removes error messages for failed login
-add_filter('login_errors',create_function('$a', "return null;"));
 
 ?>
