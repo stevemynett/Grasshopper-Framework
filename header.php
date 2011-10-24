@@ -9,21 +9,18 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="author" content="">
 	<meta name="description" content="">  
+	
 	<title><?php if (function_exists('is_tag') && is_tag()) { echo 'Tag Archive for &quot;'.$tag.'&quot; - '; } elseif (is_archive()) { wp_title(''); echo ' Archive - '; } elseif (is_search()) { echo 'Search for &quot;'.wp_specialchars($s).'&quot; - '; } elseif (!(is_404()) && (is_single()) || (is_page() && ! is_front_page())) { wp_title(''); echo ' - '; } elseif (is_404()) { echo 'Not Found - '; } if (is_front_page()) { bloginfo('name'); echo ' - '; bloginfo('description'); } else { bloginfo('name'); } ?></title>
 
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/css/styles.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/css/styles.css">
 	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 	<script src="<?php bloginfo('template_url'); ?>/js/modernizr.2.0.6.custom.js"></script>
-<<<<<<< HEAD
-	<?php if ( is_singular() ) echo '<link rel="canonical" href="' . get_permalink(); ?>
-=======
 	<?php wp_enqueue_script('jquery', '/wp-content/themes/sm_framework/js/jquery-1.6.2.min.js', array('jquery')); ?>	
 	
-	<?php if ( is_singular() ) echo '<link rel="canonical" href="' . get_permalink() . '" />'; ?>
->>>>>>> Typo on rel="canonical" in header
-	
+	<?php if ( is_singular() ) echo '<link rel="canonical" href="' . get_permalink() . '">'; ?>
+
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
