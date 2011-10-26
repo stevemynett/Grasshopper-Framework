@@ -20,6 +20,11 @@ input[type=search]::-webkit-search-decoration {
 
 text-rendering: optimizeLegibility;
 
+/* remove text area sizing handles in FF */
+textarea {
+	resize:none;
+}
+
 /* =============================================================================
 	http://twitter.com/#!/shawnjohnston/status/119136576906334209
    ========================================================================== */
