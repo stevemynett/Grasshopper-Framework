@@ -12,8 +12,7 @@
 	
 	<title><?php if (function_exists('is_tag') && is_tag()) { echo 'Tag Archive for &quot;'.$tag.'&quot; - '; } elseif (is_archive()) { wp_title(''); echo ' Archive - '; } elseif (is_search()) { echo 'Search for &quot;'.wp_specialchars($s).'&quot; - '; } elseif (!(is_404()) && (is_single()) || (is_page() && ! is_front_page())) { wp_title(''); echo ' - '; } elseif (is_404()) { echo 'Not Found - '; } if (is_front_page()) { bloginfo('name'); echo ' - '; bloginfo('description'); } else { bloginfo('name'); } ?></title>
 
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/css/styles.less">
-	<link rel="stylesheet/less" type="text/css" href="styles.less">
+	<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_url'); ?>/css/styles.less">
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
