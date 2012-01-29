@@ -87,9 +87,9 @@ function hide_profile_fields( $contactmethods ) {
 }
 
 // kill the admin nag
-if (!current_user_can('edit_users')) {
-	add_action('init', create_function('$a', "remove_action('init', 'wp_version_check');"), 2);
-	add_filter('pre_option_update_core', create_function('$a', "return null;"));
+if ( !current_user_can('administrator') ) {
+    add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_version_check' );" ), 2 );
+    add_filter( 'pre_option_update_core', create_function( '$a', "return null;" ) );
 }
 
 // category id in body and post class
@@ -216,7 +216,18 @@ function change_post_to_article( $translated ) {
 	return $translated;
 }
 
+// Removes <p> tags from being auto inserted around images
+function filter_ptags_on_images($content){
+   return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
+add_filter('the_content', 'filter_ptags_on_images');
 
-
+function replace_excerpt($content) {
+    return str_replace('[...]',
+    '<div class="more-link"><a href="'. get_permalink() .'">Continue Reading</a></div>',
+    $content
+    );
+}
+add_filter('the_excerpt', 'replace_excerpt');
 
 ?>

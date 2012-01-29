@@ -4,34 +4,25 @@
  * If it isn't a normalize or reset thing. It goes here
  * 
 */
-
-
 /* =============================================================================
    Bits and pieces from http://www.paulrhayes.com/2010-08/useful-css-snippets/
    ========================================================================== */
-
 input[type=search] {
-		-webkit-appearance: none;
+  -webkit-appearance: none;
 }
-
 input[type=search]::-webkit-search-decoration {
-	display: none;
+  display: none;
 }
-
 /* remove text area sizing handles in FF */
 textarea {
-	resize:none;
+  resize: none;
 }
-
 /* =============================================================================
 	http://twitter.com/#!/shawnjohnston/status/119136576906334209
    ========================================================================== */
-
 body {
-	-webkit-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
 }
-
-
 /* =============================================================================
   	Some H5BP Stuff
    ========================================================================== */
@@ -40,19 +31,13 @@ body {
  * These selection declarations have to be separate
  * Also: hot pink! (or customize the background color to match your design)
  */
-
-::-moz-selection { 
-	background: #fe57a1;
-	color: #fff; 
-	text-shadow: none; 
+::-moz-selection {
+  background: #fe57a1;
+  color: #fff;
+  text-shadow: none;
 }
-
-::selection { 
-	background: #fe57a1; 
-	color: #fff; 
-	text-shadow: none; 
+::selection {
+  background: #fe57a1;
+  color: #fff;
+  text-shadow: none;
 }
-
-
-
-
