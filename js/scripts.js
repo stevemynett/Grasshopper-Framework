@@ -1,7 +1,5 @@
-$j=jQuery.noConflict();
-
-
-$j(document).ready(function() {
+jQuery(document).ready(function($) {
+    // $() will work as an alias for jQuery() inside of this function
 
 
 });

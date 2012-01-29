@@ -217,3 +217,17 @@ Options -Indexes
 <IfModule mod_rewrite.c>
   RewriteRule "(^|/)\." - [F]
 </IfModule>
+
+
+
+# Projects wp.config and .htaccess from being seen
+
+<Files wp-config.php>  
+   order allow,deny  
+   deny from all  
+</Files>  
+
+<Files .htaccess>  
+   order allow,deny  
+   deny from all  
+</Files>
