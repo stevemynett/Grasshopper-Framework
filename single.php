@@ -4,7 +4,7 @@
 		<section id="main_content">
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<h2><?php the_title(); ?></h2>
+						<h1><?php the_title(); ?></h1>
 						<?php post_meta(); ?>
 					<?php the_content();?>
 					<?php edit_post_link(); ?>
