@@ -10,7 +10,7 @@
     <meta name="description" content=""> 
     <meta name="viewport" content="width=device-width,initial-scale=1"> 
 
-    <title><?php sm_title(); ?></title>
+    <title><?php my_title(); ?></title>
 
     <link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_url'); ?>/css/prod/styles.less">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -23,6 +23,9 @@
     <?php if ( is_singular() && get_option( 'thread_comments' )) wp_enqueue_script( 'comment-reply' ); ?>
 
 	<?php wp_head(); ?>
+	<?php if(is_search()) { ?>
+       <meta name="robots" content="noindex, nofollow" />
+    <?php }?>
 </head>
 <body <?php body_class(); ?>>
 
