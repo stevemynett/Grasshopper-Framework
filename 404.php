@@ -3,7 +3,7 @@
 <?php get_header(); ?>
 
 	<section id="main">
-		<section id="main_content">
+		<section id="main_content" role="main">
 			<article>
 				<h2>Oops.. File or page not found.</h2>
 				<p>We've recently made changes to our website and the page you are looking for might have been deleted or moved. Please <a href="<?php echo home_url(); ?>">visit our home page or <a href="javascript:history.back()">return to your previous page</a> instead</a>.</p>

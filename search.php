@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 	<section id="main">
-		<section id="main_content">
+		<section id="main_content" role="main">
 			<h2>Search results</h2>
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

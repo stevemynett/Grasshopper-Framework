@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 	<section id="main">
-		<section id="main_content">
+		<section id="main_content" role="main">
 	
 		<?php if (have_posts()) : ?>
 	
