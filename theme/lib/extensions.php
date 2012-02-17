@@ -119,8 +119,37 @@ add_action('check_comment_flood', 'check_referrer');
 function filter_ptags_on_images($content){
    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
-
 add_filter('the_content', 'filter_ptags_on_images');
+
+
+/*  ******************************************
+    remove extra css that recent comments widget injects
+******************************************* */
+function remove_recent_comments_style() {
+    global $wp_widget_factory;
+    remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
+}
+add_action('widgets_init', 'remove_recent_comments_style');
+
+
+/*  ******************************************
+    add feed links to header
+******************************************* */
+
+if (function_exists('automatic_feed_links')) {
+    automatic_feed_links();
+} else {
+    return;
+}
+
+/*  ******************************************
+    no more jumping for read more link to header
+******************************************* */
+
+function no_more_jumping($post) {
+    return '<a href="'.get_permalink($post->ID).'" class="read-more">'.'Continue Reading'.'</a>';
+}
+add_filter('excerpt_more', 'no_more_jumping');
 
 
 ?>
