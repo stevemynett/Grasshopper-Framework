@@ -85,7 +85,6 @@ add_filter( 'comment_reply_link',      'xwp_dofollow' );
 add_filter( 'comment_text',            'xwp_dofollow' );
 
 
-
 /*  ******************************************
     Extend the edit comments to include delete and mark as spam
     delete_comment_link(get_comment_ID()); added in comments.php as well
@@ -122,12 +121,6 @@ function filter_ptags_on_images($content){
 }
 
 add_filter('the_content', 'filter_ptags_on_images');
-
-
-
-
-
-
 
 
 ?>
