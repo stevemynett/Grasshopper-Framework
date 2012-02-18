@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <section id="main">
     <section id="main_content" role="main">
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

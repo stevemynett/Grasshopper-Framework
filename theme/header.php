@@ -21,9 +21,9 @@
     <?php if ( is_singular() ) echo '<link rel="canonical" href="' . get_permalink() . '">'; ?>
     <?php if ( is_singular() && get_option( 'thread_comments' )) wp_enqueue_script( 'comment-reply' ); ?>
 
-	<?php wp_head(); ?>
-	<?php if(is_search()) { ?>
-       <meta name="robots" content="noindex, nofollow" />
+    <?php wp_head(); ?>
+    <?php if(is_search()) { ?>
+        <meta name="robots" content="noindex, nofollow" />
     <?php }?>
 </head>
 <body <?php body_class(); ?>>
