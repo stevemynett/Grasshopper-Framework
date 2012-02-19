@@ -4,6 +4,12 @@
    ========================================================================== */
  
 @media print {
+    
+    body {
+        background-color: white; 
+        color: #111;
+    }
+    
     /* Black prints faster: h5bp.com/s */	
     * { 
         background: transparent !important; 
@@ -15,6 +21,8 @@
 
     a, a:visited { 
         text-decoration: underline; 
+        font-weight: bold; 
+        color: #06c; // blue but prints as a nice grey scale when BW
     }
     a[href]:after {
         content: " (" attr(href) ")"; 
@@ -62,4 +70,35 @@
     h2, h3 {
         page-break-after: avoid; 
     }
-}
+    
+    /* Some best practice things from 
+    http://www.webdesignerdepot.com/2010/01/10-tips-for-better-print-style-sheets/
+    Commented out and enabled on project specific cases */
+    
+    /*
+    
+    // Remove header 
+    header {
+        display: none; 
+    }
+
+    // remove nav 
+    nav {
+        display: none
+    }
+    
+    // enlarge main content area 
+    
+    #main_content {
+        float: none; 
+        width: 100%; 
+        float: none; 
+    }
+    
+    // remove the sidebar 
+    
+    #sidebar {
+        display: none
+    }
+        */
+    }
