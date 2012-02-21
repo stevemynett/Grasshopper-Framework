@@ -27,3 +27,4 @@ Velvet Blues Update URL's
 Post Rank
 Adminimize
 http://wordpress.org/extend/plugins/reveal-ids-for-wp-admin-25/
+Relevanssi (extends / replaces search)
