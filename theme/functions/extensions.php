@@ -136,11 +136,7 @@ add_action('widgets_init', 'remove_recent_comments_style');
     add feed links to header
 ******************************************* */
 
-if (function_exists('automatic_feed_links')) {
-    automatic_feed_links();
-} else {
-    return;
-}
+
 
 /*  ******************************************
     no more jumping for read more link to header

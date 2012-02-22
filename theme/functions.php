@@ -12,22 +12,22 @@
 /*  ******************************************
     Calls the custom meta file
 ******************************************* */
-    require TEMPLATEPATH.'/lib/additions.php';
+    require TEMPLATEPATH.'/functions/additions.php';
     
 /*  ******************************************
     Calls the custom meta file
 ******************************************* */
-    require TEMPLATEPATH.'/lib/admin-wp.php';
+    require TEMPLATEPATH.'/functions/admin-wp.php';
 
 /*  ******************************************
     Calls the custom meta file
 ******************************************* */
-    require TEMPLATEPATH.'/lib/extensions.php';
+    require TEMPLATEPATH.'/functions/extensions.php';
 
 /*  ******************************************
     Calls the custom meta file
 ******************************************* */
-    require TEMPLATEPATH.'/lib/structural.php';
+    require TEMPLATEPATH.'/functions/structural.php';
 
 /*  ******************************************
     Calls the custom meta file

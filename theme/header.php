@@ -11,7 +11,10 @@
 
     <title><?php my_title(); ?></title>
 
-    <link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_url'); ?>/css/prod/styles.less">
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/prod/styles.css">
+    <!--[if IE]>
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/prod/ie.css"/>
+    <![endif]-->
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
@@ -32,7 +35,7 @@
     <header>
         <a class="logo ir" href="<?php bloginfo('home'); ?>" rel="home"><?php bloginfo('name'); ?> |  <?php bloginfo('description'); ?></a>
 
-        <nav class="primary">>
+        <nav class="primary">
         <a href="<?php echo get_permalink(2); ?>" <?php if(is_page('2')){echo 'class="current_page_item"';};?>>Home</a>
         </nav>
     </header>
