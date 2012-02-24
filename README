@@ -6,7 +6,7 @@ I write a lot of Wordpress projects and use this as an ongoing starting point th
 
 ## Goal
 
-I do custom theming and don't want to inherit styles into my projects. Stylistically, this is a bare bones framework. It also incorporates techniques I use on every project. I want to add to this not remove from it on a per project basis. The exception to this is '/lib/optional.php' which is an ongoing repository of highly useful functions that are often used; but not in every project. (eg Dynamic Sidebars, post-thumbnail support)
+I do custom theming and don't want to inherit styles into my projects. Stylistically, this is a bare bones framework. It also incorporates techniques I use on every project. I want to add to this - not remove from it on a per project basis. The exception to this is '/lib/optional.php' which is an ongoing repository of highly useful functions that are often used; but not in every project. (eg Dynamic Sidebars, post-thumbnail support)
 
 ## Dependancies
 - jQuery (latest version)
