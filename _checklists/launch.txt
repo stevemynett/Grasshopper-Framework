@@ -1,0 +1,7 @@
+1) Move Files in "../_move_to_root" to root
+2) Move wp-config.php to root
+3) Pick a random DB prefix
+4) Populate DB information and install WP
+5) Delete files from WP root for additional security
+    - license.txt
+    - readme.html
