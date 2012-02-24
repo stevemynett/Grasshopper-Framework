@@ -1,7 +1,6 @@
-1) Move Files in "../_move_to_root" to root
-2) Move wp-config.php to root
-3) Pick a random DB prefix
-4) Populate DB information and install WP
-5) Delete files from WP root for additional security
-    - license.txt
-    - readme.html
+1) Turn WP_Debug to false (wp-config.php)
+2) Set sitemap link in robots.txt
+3) Install plugins but especially:  
+    - Google Sitemaps
+    - Google Analytics
+    - DB backups

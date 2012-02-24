@@ -8,7 +8,7 @@
   Names:
 
 /* SITE */
-  Standards: HTML5, CSS3
+  Standards: HTML5, CSS3, Wordpress
   Components: Modernizr, jQuery
   Software: Textmate, Git, Git for Mac
   
