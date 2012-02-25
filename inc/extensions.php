@@ -198,4 +198,16 @@ function skm_no_generator() { return ''; }
 add_filter('the_generator', 'skm_no_generator');
 
 
+/*  ******************************************
+    we don't need to self-close these tags in html5:
+    <img>, <input>
+* ******************************************* */
+    
+function skm_remove_self_closing_tags($input) {
+  return str_replace(' />', '>', $input);
+}
+add_filter('get_avatar', 'skm_remove_self_closing_tags');
+add_filter('comment_id_fields', 'skm_remove_self_closing_tags');
+add_filter('post_thumbnail_html', 'skm_remove_self_closing_tags');
+
 ?>
