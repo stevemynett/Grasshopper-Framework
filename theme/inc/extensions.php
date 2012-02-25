@@ -3,14 +3,27 @@
 /*  ******************************************
     Custom Excerpt
 ******************************************* */
+function excerpt($limit) {
+    $excerpt = explode(' ', get_the_content(), $limit);
+    if (count($excerpt)>=$limit) {
+        array_pop($excerpt);
+        $excerpt = implode(" ",$excerpt).'...';
+    } else {
+        $excerpt = implode(" ",$excerpt);
+    } 
+    $excerpt = preg_replace('`\[[^\]]*]`','',$excerpt);
+    $excerpt = preg_replace("/<img(.*?)>/si", "", $excerpt);
+    $excerpt = preg_replace("/<em(.*?)>/si", "", $excerpt);
+    return $excerpt;preg_replace('`\[[^\]]*]`','',$excerpt);
+}
 
 function custom_excerpt($length='',$more_txt='Read More') {
     $default_length = 30;
     if (empty($length)) {
-        $excerpt_length = $default_length;
-    } else {
-        $excerpt_length = $length;
-    }
+            $excerpt_length = $default_length;
+        } else {
+            $excerpt_length = $length;
+        }
     $excerpt = excerpt($excerpt_length);
     $link = '<a href="'.get_permalink($post->ID).'" class="more_link">'.$more_txt.'</a>';
     $output = "$excerpt $link";
@@ -133,12 +146,6 @@ add_action('widgets_init', 'remove_recent_comments_style');
 
 
 /*  ******************************************
-    add feed links to header
-******************************************* */
-
-
-
-/*  ******************************************
     no more jumping for read more link to header
 ******************************************* */
 
@@ -146,6 +153,45 @@ function no_more_jumping($post) {
     return '<a href="'.get_permalink($post->ID).'" class="read-more">'.'Continue Reading'.'</a>';
 }
 add_filter('excerpt_more', 'no_more_jumping');
+
+/*  ******************************************
+    redirect /?s to /search/
+    http://txfx.net/wordpress-plugins/nice-search/
+* ******************************************* */
+
+function roots_nice_search_redirect() {
+  if (is_search() && strpos($_SERVER['REQUEST_URI'], '/wp-admin/') === false && strpos($_SERVER['REQUEST_URI'], '/search/') === false) {
+    wp_redirect(home_url('/search/' . str_replace(array(' ', '%20'), array('+', '+'), urlencode(get_query_var('s')))), 301);
+      exit();
+  }
+}
+
+add_action('template_redirect', 'roots_nice_search_redirect');
+
+function roots_search_query($escaped = true) {
+  $query = apply_filters('roots_search_query', get_query_var('s'));
+  if ($escaped) {
+      $query = esc_attr($query);
+  }
+  return urldecode($query);
+}
+
+add_filter('get_search_query', 'roots_search_query');
+
+/*  ******************************************
+    fix for empty search query
+    http://wordpress.org/support/topic/blank-search-sends-you-to-the-homepage#post-1772565
+* * ******************************************* */
+
+function roots_request_filter($query_vars) {
+  if (isset($_GET['s']) && empty($_GET['s'])) {
+    $query_vars['s'] = " ";
+  }
+  return $query_vars;
+}
+
+add_filter('request', 'roots_request_filter');
+
 
 
 ?>
