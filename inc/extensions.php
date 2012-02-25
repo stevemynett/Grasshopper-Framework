@@ -159,39 +159,43 @@ add_filter('excerpt_more', 'no_more_jumping');
     http://txfx.net/wordpress-plugins/nice-search/
 * ******************************************* */
 
-function roots_nice_search_redirect() {
+function skm_nice_search_redirect() {
   if (is_search() && strpos($_SERVER['REQUEST_URI'], '/wp-admin/') === false && strpos($_SERVER['REQUEST_URI'], '/search/') === false) {
     wp_redirect(home_url('/search/' . str_replace(array(' ', '%20'), array('+', '+'), urlencode(get_query_var('s')))), 301);
       exit();
   }
 }
+add_action('template_redirect', 'skm_nice_search_redirect');
 
-add_action('template_redirect', 'roots_nice_search_redirect');
-
-function roots_search_query($escaped = true) {
-  $query = apply_filters('roots_search_query', get_query_var('s'));
+function skm_search_query($escaped = true) {
+  $query = apply_filters('skm_search_query', get_query_var('s'));
   if ($escaped) {
       $query = esc_attr($query);
   }
   return urldecode($query);
 }
+add_filter('get_search_query', 'skm_search_query');
 
-add_filter('get_search_query', 'roots_search_query');
 
 /*  ******************************************
     fix for empty search query
     http://wordpress.org/support/topic/blank-search-sends-you-to-the-homepage#post-1772565
 * * ******************************************* */
 
-function roots_request_filter($query_vars) {
+function skm_request_filter($query_vars) {
   if (isset($_GET['s']) && empty($_GET['s'])) {
     $query_vars['s'] = " ";
   }
   return $query_vars;
 }
 
-add_filter('request', 'roots_request_filter');
+add_filter('request', 'skm_request_filter');
 
+/*  ******************************************
+    remove WordPress version from RSS feed
+* ******************************************* */
+function skm_no_generator() { return ''; }
+add_filter('the_generator', 'skm_no_generator');
 
 
 ?>
