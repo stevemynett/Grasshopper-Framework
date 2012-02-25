@@ -7,3 +7,4 @@
     - readme.html
 6) Set Project specific details in style.css in WP theme root    
 7) Set CHMOD for .htaccess and wp-config.php to 640
+8) Create Screenshot
