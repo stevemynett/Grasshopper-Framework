@@ -210,4 +210,7 @@ add_filter('get_avatar', 'skm_remove_self_closing_tags');
 add_filter('comment_id_fields', 'skm_remove_self_closing_tags');
 add_filter('post_thumbnail_html', 'skm_remove_self_closing_tags');
 
+
+
+
 ?>
