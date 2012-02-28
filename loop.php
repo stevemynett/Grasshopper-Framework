@@ -8,15 +8,9 @@
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <h2 class="entry-title"><a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title(); ; ?>" rel="bookmark"><?php the_title(); ?></a></h2>
             <?php post_meta(); ?>
-        <?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
-            <article class="entry-summary">
-                <?php custom_excerpt(45, "More Info"); ?>
-            </article>
-        <?php else : ?>
             <article class="entry-content">
                 <?php custom_excerpt(100, "More Info"); ?>
             </article>
-        <?php endif; ?>
         </article>
         <?php comments_template( '', true ); ?>
 <?php endwhile;?>
