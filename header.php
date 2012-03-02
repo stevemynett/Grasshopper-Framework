@@ -11,7 +11,7 @@
 
     <title><?php my_title(); ?></title>
 
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/prod/styles.css">
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/styles.css">
     <!--[if IE]>
         <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/prod/ie.css"/>
     <![endif]-->
@@ -33,7 +33,7 @@
 
 <div id="wrapper">
     <header>
-        <a class="logo ir" href="<?php bloginfo('home'); ?>" rel="home"><?php bloginfo('name'); ?> |  <?php bloginfo('description'); ?></a>
+        <a class="logo" href="<?php bloginfo('home'); ?>" rel="home"><?php bloginfo('name'); ?> |  <?php bloginfo('description'); ?></a>
 
         <nav class="primary">
         <a href="<?php echo get_permalink(2); ?>" <?php if(is_page('2')){echo 'class="current_page_item"';};?>>Home</a>
