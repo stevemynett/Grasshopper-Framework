@@ -23,6 +23,7 @@ A mental list here to refer to when starting projects. These are seperated into 
 * [Relevanssi](http://wordpress.org/extend/plugins/relevanssi) - extends / replaces search
 
 ** Best in Breed Plugins used on a per project basis
+
 * [Twitter for Wordpress](http://wordpress.org/extend/plugins/twitter-for-wordpress/)
 * [Disqus Comments](http://disqus.com/)
 * [Subscribe to Comments](http://wordpress.org/extend/plugins/subscribe-to-comments/)
