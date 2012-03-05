@@ -74,6 +74,19 @@ function update_active_plugins($value = '') {
     return $value;
 }
 
+/*  ******************************************
+    Custom Dashboard Message
+******************************************* */
+
+function my_custom_dashboard_widgets() {
+    global $wp_meta_boxes;
+    wp_add_dashboard_widget('custom_help_widget', 'Custom Blog Message', 'custom_dashboard_help');
+}
+
+function custom_dashboard_help() {
+    echo '<p>Custom welcome message goes here. Included here can be instructions, links for help. </p>';
+}
+add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');
 
 
 
