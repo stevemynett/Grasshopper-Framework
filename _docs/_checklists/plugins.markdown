@@ -22,7 +22,7 @@ A mental list here to refer to when starting projects. These are seperated into 
 * [Reveal ID's for WP-admin](http://wordpress.org/extend/plugins/reveal-ids-for-wp-admin-25)
 * [Relevanssi](http://wordpress.org/extend/plugins/relevanssi) - extends / replaces search
 
-** Best in Breed Plugins used on a per project basis
+## Best in Breed Plugins used on a per project basis
 
 * [Twitter for Wordpress](http://wordpress.org/extend/plugins/twitter-for-wordpress/)
 * [Disqus Comments](http://disqus.com/)
