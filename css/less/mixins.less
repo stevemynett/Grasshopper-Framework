@@ -1,0 +1,52 @@
+/***********************************************
+ *
+ * Some of my Mixins used in projects
+ *
+************************************************/
+
+
+
+/***********************************************
+ For image replacement updated with the latest from       
+ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/#comments
+************************************************/
+.ir() { 
+    display: block; 
+    border: 0; 
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden; 
+    background-color: transparent; 
+    background-repeat: no-repeat; 
+    text-align: left; 
+    direction: ltr;
+}
+
+/***********************************************
+ Clearfix
+************************************************/
+.clearfix() {
+  &:before { content: ''; display: block; }
+  &:after { content: ''; display: table; clear: both; }
+  zoom: 1;
+}
+
+/***********************************************
+ Mixin for REM's adjusted from 
+ https://gist.github.com/1194732
+************************************************/
+.font-size(@font-size: 16){
+    @rem: (@font-size / 10);
+    font-size: ~"@{rem}rem";
+    font-size: @font-size * 1px;
+}
+
+/***********************************************
+ REM's for Line Height
+************************************************/
+.line-height(@line-height: 16){
+    @rem: (@line-height / 10);
+    line-height: ~"@{rem}rem";
+    line-height: @line-height * 1px;
+}
+
