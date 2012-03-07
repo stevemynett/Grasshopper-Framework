@@ -19,7 +19,6 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
     <script src="<?php bloginfo('template_url'); ?>/js/modernizr.js"></script>
-    <?php wp_enqueue_script('jquery', '/wp-content/themes/theme/js/jquery.js', array('jquery')); ?>	
 
     <?php if ( is_singular() ) echo '<link rel="canonical" href="' . get_permalink() . '">'; ?>
     <?php if ( is_singular() && get_option( 'thread_comments' )) wp_enqueue_script( 'comment-reply' ); ?>
