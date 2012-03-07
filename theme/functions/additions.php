@@ -48,7 +48,11 @@ function is_tree($pid) {
 
 add_theme_support( 'automatic-feed-links' );
 
+/*  ******************************************
+    Add Post Thumbnail Support
+******************************************* */
 
+add_theme_support('post-thumbnails');
 
 
 ?>
