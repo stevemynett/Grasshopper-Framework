@@ -14,7 +14,7 @@ add_filter('user_contactmethods','hide_profile_fields',10,1);
 
 
 /*  ******************************************
-    Kill the Admin Nag
+    Kill the Admin Nag (except for admin users)
 ******************************************* */
 
 if ( !current_user_can('administrator') ) {
