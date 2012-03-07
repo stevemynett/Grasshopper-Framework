@@ -32,3 +32,4 @@ A mental list here to refer to when starting projects. These are seperated into 
 * [Regenerate Thumbnails](http://wordpress.org/extend/plugins/regenerate-thumbnails/) - After the fact!!!
 * [Pre-Publish Reminder](http://ericulous.com/2007/03/19/wp-plugin-genki-pre-publish-reminder/) - Publish Checklists
 * [User Role Editor](http://wordpress.org/extend/plugins/user-role-editor/)
+* [NavXT Breadcrumbs](http://wordpress.org/extend/plugins/breadcrumb-navxt/)
