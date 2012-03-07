@@ -46,6 +46,7 @@ function is_tree($pid) {
     Load up Google's jQuery 
 ******************************************* */
 
+
 $url = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'; // the URL to check against
 $test_url = @fopen($url,'r'); // test parameters
 if($test_url !== false) { // test if the URL exists
@@ -63,4 +64,5 @@ if($test_url !== false) { // test if the URL exists
     }
     add_action('wp_enqueue_scripts', 'load_local_jQuery'); // initiate the function
 }
+
 ?>
