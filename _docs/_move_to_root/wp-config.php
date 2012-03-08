@@ -98,9 +98,6 @@ if (WP_DEBUG) {
  */
 define('DISALLOW_FILE_EDIT',true);
 
-
-
-
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');

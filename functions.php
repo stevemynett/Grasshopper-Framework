@@ -10,24 +10,24 @@
 
 
 /*  ******************************************
-    Calls the custom meta file
+    Additions to the WP structure and featureset
 ******************************************* */
-    require TEMPLATEPATH.'/functions/additions.php';
+    require TEMPLATEPATH.'/inc/additions.php';
     
 /*  ******************************************
-    Calls the custom meta file
+    Additions / Edits to the Admin Section
 ******************************************* */
-    require TEMPLATEPATH.'/functions/admin-wp.php';
+    require TEMPLATEPATH.'/inc/admin-wp.php';
 
 /*  ******************************************
-    Calls the custom meta file
+    Extending or altering current WP structure and featureset
 ******************************************* */
-    require TEMPLATEPATH.'/functions/extensions.php';
+    require TEMPLATEPATH.'/inc/extensions.php';
 
 /*  ******************************************
-    Calls the custom meta file
+    Enables Theme Support as required
 ******************************************* */
-    require TEMPLATEPATH.'/functions/structural.php';
+    require TEMPLATEPATH.'/inc/theme-support.php';
 
 /*  ******************************************
     Calls the custom meta file
