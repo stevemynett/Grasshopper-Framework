@@ -7,8 +7,8 @@
 
 
 /***********************************************
- For image replacement updated with the latest from       
- http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/#comments
+    For image replacement updated with the latest from      
+    http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/#comments
 ************************************************/
 .ir() { 
     display: block; 
@@ -23,7 +23,7 @@
 }
 
 /***********************************************
- Clearfix
+    Clearfix
 ************************************************/
 .clearfix() {
   &:before { content: ''; display: block; }
@@ -32,8 +32,8 @@
 }
 
 /***********************************************
- Mixin for REM's adjusted from 
- https://gist.github.com/1194732
+    Mixin for REM's adjusted from 
+    https://gist.github.com/1194732
 ************************************************/
 .font-size(@font-size: 16){
     @rem: (@font-size / 10);
@@ -42,11 +42,23 @@
 }
 
 /***********************************************
- REM's for Line Height
+    REM's for Line Height
 ************************************************/
 .line-height(@line-height: 16){
     @rem: (@line-height / 10);
     line-height: ~"@{rem}rem";
     line-height: @line-height * 1px;
 }
+
+/***********************************************
+    Inline Block
+    http://foohack.com/2007/11/cross-browser-support-for-inline-block-styling/
+************************************************/
+.inline-block{
+    display:-moz-inline-stack;
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+}
+
 
