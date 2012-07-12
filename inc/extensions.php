@@ -110,22 +110,6 @@ function delete_comment_link($id) {
     }
 }
 
-
-/*  ******************************************
-    This code automatically rejects any request for comment posting coming from a browser 
-    (or, more commonly, a bot) that has no referrer in the request. Checking is done with the 
-    PHP $_SERVER[] array. If the referrer is not defined or is incorrect, the wp_die function 
-    is called and the script stops its execution
-******************************************* */
-
-function check_referrer() {
-    if (!isset($_SERVER['HTTP_REFERER']) || $_SERVER['HTTP_REFERER'] == “”) {
-        wp_die( __('Please enable referrers in your browser, or, if you\'re a spammer, bugger off!') );
-    }
-}
-add_action('check_comment_flood', 'check_referrer');
-
-
 /*  ******************************************
     Remove P tags from imgs
 ******************************************* */
