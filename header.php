@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-    <script src="<?php bloginfo('template_url'); ?>/js/modernizr.js"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/scripts.min.js"></script>
 
     <?php if ( is_singular() ) echo '<link rel="canonical" href="' . get_permalink() . '">'; ?>
     <?php if ( is_singular() && get_option( 'thread_comments' )) wp_enqueue_script( 'comment-reply' ); ?>
