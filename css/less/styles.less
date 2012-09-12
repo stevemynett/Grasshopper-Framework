@@ -1,11 +1,54 @@
-@import "variables.less";
-@import "mixins.less";
-@import "css3.less";
-@import "reset.less";
-@import "normalize.less";
-@import "bestpractice.less";
-@import "project.less";
-//@import "threaded-comments.less";
-@import "wordpress.less";
-@import "media-queries.less";
-@import "print.less";
+/*
+*	INIT FILE FOR CSS
+*	Based on and adapted from @snookca's SMACCS approach
+*	http://smacss.com/
+*
+*	Reference on categorization:
+*	http://smacss.com/book/categorizing
+*
+*	Each of these files calls an init file in each folder
+*	These are compiled down to /css/styles.css
+*/
+
+
+/*
+*	1. BASE
+*	Base rules are the defaults. They are almost exclusively 
+*	single element selectors but it could include attribute 
+*	selectors, pseudo-class selectors, child selectors or 
+*	sibling selectors. Essentially, a base style says that 
+*	wherever this element is on the page, it should look like this.
+*/
+	@import 'base/base';
+
+
+/*
+*	2. LAYOUT
+*	Layout rules divide the page into sections. 
+*	Layouts hold one or more modules together.
+*/	
+	@import 'layout/layout';
+
+
+/*
+*	3. MODULE
+*	Modules are the reusable, modular parts of our 
+*	design. They are the callouts, the sidebar sections, 
+*	the product lists and so on.
+*/
+
+	@import 'module/module';
+
+
+/* 
+*	4. STATES
+*	State rules are ways to describe how our modules or 
+*	layouts will look when in a particular state. Is it 
+*	hidden or expanded? Is it active or inactive? They are 
+*	about describing how a module or layout looks on screens 
+*	that are smaller or bigger. They are also about describing 
+*	how a module might look in different views like the home 
+*	page or the inside page.
+*/	
+
+	@import 'state/state';
